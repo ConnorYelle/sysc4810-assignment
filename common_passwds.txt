@@ -188,7 +188,6 @@ master
 1234561
 adminisp
 azerty123
-pakistan
 aaaaaaaa
 a1234567
 P@55w0rd

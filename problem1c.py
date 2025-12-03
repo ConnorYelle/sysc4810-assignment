@@ -4,7 +4,7 @@ OPERATION_ROLES = {
 	"view_account_balance": ["Client", "Premium Client", "Financial Advisor", "Financial Planner", "Teller"],
 	"view_investment_portfolio": ["Client", "Premium Client", "Financial Advisor", "Financial Planner", "Teller"],
 	"modify_investment_portfolio": ["Premium Client", "Financial Advisor", "Financial Planner"],
-	"view_financial_adivisor_contact": ["Client", "Premium Client"],
+	"view_financial_advisor_contact": ["Client", "Premium Client"],
 	"view_financial_planner_contact": ["Premium Client"],
 	"view_money_market_instruments": ["Financial Planner"],
 	"view_private_consumer_instruments": ["Financial Advisor", "Financial Planner"],
@@ -24,8 +24,8 @@ def check_access(user, operation):
 		if user.roles in OPERATION_ROLES["modify_investment_portfolio"]:
 			return True
 
-	elif operation == "view_financial_adivisor_contact":
-		if user.roles in OPERATION_ROLES["view_financial_adivisor_contact"]:
+	elif operation == "view_financial_advisor_contact":
+		if user.roles in OPERATION_ROLES["view_financial_advisor_contact"]:
 			return True
 
 	elif operation == "view_financial_planner_contact":

@@ -1,5 +1,5 @@
 from problem3b import signup_UI
-
+from problem4a import login_UI
 if __name__ == "__main__":
 	running = True
 	logged_in = False
@@ -11,8 +11,7 @@ if __name__ == "__main__":
 		if action == "sign-up":
 			signup_UI()
 		elif action == "login":
-			#login_UI()
-			print("Login functionality not yet implemented.\n")
+			login_UI()
 		elif action == "quit":
 			print("Exiting the JustInvest System.\n")
 			running = False

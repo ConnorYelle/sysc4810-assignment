@@ -24,8 +24,8 @@ def signup_new_password(username, password, iterations: int):
                     print("Username already exists...")
                     return False
     except FileNotFoundError:
-        #password file does not exist yet; it will be created below
-        pass
+        print("Password file not found")
+        return False
 
     #append the new user to the password file
     try:
