@@ -51,7 +51,7 @@ def signup_UI():
 		print("Username and password cannot be the same. Please try again.")
 		return
 	elif proactive_password_check(password):
-		signup_new_password(username, password, 300)
+		signup_new_password(username, password, 300, "Client")
 		print("Signup successful!")
 		return
 	else:

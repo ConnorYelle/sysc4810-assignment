@@ -8,6 +8,7 @@ OPERATION_ROLES = {
 	"view_financial_planner_contact": ["Premium Client"],
 	"view_money_market_instruments": ["Financial Planner"],
 	"view_private_consumer_instruments": ["Financial Advisor", "Financial Planner"],
+	"change_user_roles": ["Admin"]
 }
 
 #Function to check if a user has access to a specific operation

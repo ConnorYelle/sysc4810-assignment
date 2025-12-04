@@ -1,7 +1,7 @@
 import hashlib
 import os
 
-def signup_new_password(username, password, iterations: int):
+def signup_new_password(username, password, iterations: int, role: str) -> bool:
 
     #16 bytes because it is large enough to guarantee uniqueness across users
     salt = os.urandom(16)
@@ -30,7 +30,7 @@ def signup_new_password(username, password, iterations: int):
     #append the new user to the password file
     try:
         with open("passwd.txt", "a") as file:
-            file.write(username + "," + hex_hashed + "," + hex_salt + "," + str(iterations) + "\n")
+            file.write(username + "," + hex_hashed + "," + hex_salt + "," + str(iterations) + ","+role+ "\n")
         return True
     except FileNotFoundError:
         print("Password file not found...")
